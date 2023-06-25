@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Converter</title>
+    <link rel="stylesheet" href="css/time.css">
+</head>
+<body>
+    <div id="nav">
+        <ul>
+            <li><a href="index.html">Length</a></li>
+            <li><a href="temperature.html">Temperature</a></li>
+            <li><a href="area.html">Area</a></li>
+            <li><a href="volume.html">Volume</a></li>
+            <li><a href="weight.html">Weight</a></li>
+            <li class="active"><a href="time.html">Time</a></li>
+        </ul>
+    </div>
+    <div id="time">
+        <h1>Time Converter</h1>
+        <div class="container-field">
+            <div class="input-group">
+                <div>
+                    <label for="fromUnit">
+                        <h4>From:</h4>
+                    </label>
+                </div>
+                    <select  id="fromUnit" class="select-group">
+                        <option value="Second">Second</option>
+                        <option value="Millisecon">Millisecond</option>
+                        <option value="Microsecond">Microsecond</option>
+                        <option value="Nanosecond">Nanosecond</option>
+                        <option value="Picosecond">Picosecond</option>
+                        <option value="Minute">Minute</option>
+                        <option value="Hour">Hour</option>
+                        <option value="Day">Day</option>
+                        <option value="Week">Week</option>
+                        <option value="Month">Month</option>
+                        <option value="Year">Year</option>
+                    </select>
+                    <input type="number" placeholder="Input Length" id="fromLength">
+            </div>
+            <div class="input-group">
+                <div id="toUnit-div">
+                    <label for="toUnit">
+                        <h4>To:</h4>
+                    </label>
+                </div>
+                <select  id="toUnit" class="select-group">
+                    <option value="Second">Second</option>
+                    <option value="Millisecon">Millisecond</option>
+                    <option value="Microsecond">Microsecond</option>
+                    <option value="Nanosecond">Nanosecond</option>
+                    <option value="Picosecond">Picosecond</option>
+                    <option value="Minute">Minute</option>
+                    <option value="Hour">Hour</option>
+                    <option value="Day">Day</option>
+                    <option value="Week">Week</option>
+                    <option value="Month">Month</option>
+                    <option value="Year">Year</option>
+                </select>
+                <input readonly type="number" placeholder="Ouput" id="toLength">
+            </div>
+            <div class="input-group">
+                <button id="btnReset" onclick="reset()">Reset</button>
+                <button id="btnCalculate" onclick="calculateTime()">Calculate</button>
+            </div>
+        </div>
+    </div>
+    <div id="result-id">
+            <h3>Result:<span id="output-id"></span></h3>
+
+    </div>
+    <script src="time.js"></script>
+</body>
+</html>

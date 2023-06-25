@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Converter</title>
+    <link rel="stylesheet" href="css/area.css">
+</head>
+<body>
+    <div id="nav">
+        <ul>
+            <li><a href="index.html">Length</a></li>
+            <li><a href="temperature.html">Temperature</a></li>
+            <li class="active"><a href="area.html">Area</a></li>
+            <li><a href="volume.html">Volume</a></li>
+            <li><a href="weight.html">Weight</a></li>
+            <li><a href="time.html">Time</a></li>
+        </ul>
+    </div>
+    <div id="length">
+        <h1>Area Converter</h1>
+        <div class="container-field">
+            <div class="input-group">
+                <div>
+                    <label for="fromUnit">
+                        <h4>From:</h4>
+                    </label>
+                </div>
+                    <select  id="fromUnit" class="select-group">
+                        <option value="Square-meter">Square meter</option>
+                        <option value="Square-kilometer">Square Kilometer</option>
+                        <option value="Square-centimeter">Square Centimeter</option>
+                        <option value="Hectare">Hectare</option>
+                        <option value="Square-Mile">Square Mile</option>
+                        <option value="Square-Yard">Square Yard</option>
+                        <option value="Square-Foot">Square Foot</option>
+                        <option value="Square-Inch">Square Inch</option>
+                        <option value="Acre">Acre</option>
+                    </select>
+                    <input type="number" placeholder="Input Length" id="fromLength">
+            </div>
+            <div class="input-group">
+                <div id="toUnit-div">
+                    <label for="toUnit">
+                        <h4>To:</h4>
+                    </label>
+                </div>
+                <select  id="toUnit" class="select-group">
+                    <option value="Square-meter">Square meter</option>
+                    <option value="Square-kilometer">Square Kilometer</option>
+                    <option value="Square-centimeter">Square Centimeter</option>
+                    <option value="Hectare">Hectare</option>
+                    <option value="Square-Mile">Square Mile</option>
+                    <option value="Square-Yard">Square Yard</option>
+                    <option value="Square-Foot">Square Foot</option>
+                    <option value="Square-Inch">Square Inch</option>
+                    <option value="Acre">Acre</option>
+                </select>
+                <input readonly type="number" placeholder="Ouput" id="toLength">
+            </div>
+            <div class="input-group">
+                <button id="btnReset" onclick="reset()">Reset</button>
+                <button id="btnCalculate" onclick="calculateLength()">Calculate</button>
+            </div>
+        </div>
+    </div>
+    <div id="result-id">
+            <h3>Result:<span id="output-id"></span></h3>
+
+    </div>
+    
+    <script src="area.js"></script>
+</body>
+</html>

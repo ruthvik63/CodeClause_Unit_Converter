@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/14eaade31c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="nav">
+        <ul>
+            <li><a href="index.html">Length</a></li>
+            <li><a href="temperature.html">Temperature</a></li>
+            <li><a href="area.html">Area</a></li>
+            <li class="active"><a href="volume.html">Volume</a></li>
+            <li><a href="weight.html">Weight</a></li>
+            <li><a href="time.html">Time</a></li>
+        </ul>
+    </div>
+    <div id="length">
+        <h1>Volume Converter</h1>
+        <div class="container-field">
+            <div class="input-group">
+                <div>
+                    <label for="fromUnit">
+                        <h4>From:</h4>
+                    </label>
+                </div>
+                    <select  id="fromUnit" class="select-group">
+                        <option value="Cubic-Meter">Cubic Meter</option>
+                        <option value="Cubic-Kilometer">Cubic Kilometer</option>
+                        <option value="Cubic-Centimeter">Cubic Centimeter</option>
+                        <option value="Liter">Meter</option>
+                        <option value="Milliliter">Milliliter</option>
+                        <option value="US-Gallon">US Gallon</option>
+                        <option value="US-Quart">US Quart</option>
+                        <option value="US-Pint">US Pint</option>
+                        <option value="Imperial-Gallon">Imperial Gallon</option>
+                        <option value="Imperial-Quart">Imperial Quart</option>
+                        <option value="Imperial-Pint">Imperial Pint</option>
+                        <option value="Cubic-Mile">Cubic Mile</option>
+                        <option value="Cubic-Yard">Cubic Yard</option>
+                        <option value="Cubic-Foot">Cubic Foot</option>
+                        <option value="Cubic-Inch">Cubic Inch</option>
+                    </select>
+                    <input type="number" placeholder="Input Length" id="fromLength">
+            </div>
+            <div class="input-group">
+                <div id="toUnit-div">
+                    <label for="toUnit">
+                        <h4>To:</h4>
+                    </label>
+                </div>
+                <select  id="toUnit" class="select-group">
+                    <option value="Cubic-Meter">Cubic Meter</option>
+                    <option value="Cubic-Kilometer">Cubic Kilometer</option>
+                    <option value="Cubic-Centimeter">Cubic Centimeter</option>
+                    <option value="Liter">Meter</option>
+                    <option value="Milliliter">Milliliter</option>
+                    <option value="US-Gallon">US Gallon</option>
+                    <option value="US-Quart">US Quart</option>
+                    <option value="US-Pint">US Pint</option>
+                    <option value="Imperial-Gallon">Imperial Gallon</option>
+                    <option value="Imperial-Quart">Imperial Quart</option>
+                    <option value="Imperial-Pint">Imperial Pint</option>
+                    <option value="Cubic-Mile">Cubic Mile</option>
+                    <option value="Cubic-Yard">Cubic Yard</option>
+                    <option value="Cubic-Foot">Cubic Foot</option>
+                    <option value="Cubic-Inch">Cubic Inch</option>
+                </select>
+                <input readonly type="number" placeholder="Ouput" id="toLength">
+            </div>
+            <div class="input-group">
+                <button id="btnReset" onclick="reset()">Reset</button>
+                <button id="btnCalculate" onclick="calculateLength()">Calculate</button>
+            </div>
+        </div>
+    </div>
+    <div id="result-id">
+            <h3>Result:<span id="output-id"></span></h3>
+
+    </div>
+    
+    <script src="volume.js"></script>
+</body>
+</html>
